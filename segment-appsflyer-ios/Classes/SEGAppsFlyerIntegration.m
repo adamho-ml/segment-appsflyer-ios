@@ -41,11 +41,11 @@
         [self.appsflyer setAppleAppID:appleAppId];
 
         self.analytics = analytics;
-        if ([self logAttributionData]) {
-            self.appsflyer.delegate = self;
-        }
-        if (_segDLDelegate)
-            self.appsflyer.deepLinkDelegate = self;
+        // if ([self logAttributionData]) {
+        //     self.appsflyer.delegate = self;
+        // }
+        // if (_segDLDelegate)
+        //     self.appsflyer.deepLinkDelegate = self;
         
         // For Segment React Native. We should call our applicationDidBecomeActive in case we were initialized too late and missed the first launch
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -102,12 +102,12 @@
         [self.appsflyer setAppleAppID:appleAppId];
        // self.appsflyer.isDebug = true;
         
-        if ([self logAttributionData]) {
-            self.appsflyer.delegate = self;
-        }
-        if (_segDLDelegate) {
-            self.appsflyer.deepLinkDelegate = self;
-        }
+        // if ([self logAttributionData]) {
+        //     self.appsflyer.delegate = self;
+        // }
+        // if (_segDLDelegate) {
+        //     self.appsflyer.deepLinkDelegate = self;
+        // }
         
     }
     return self;
